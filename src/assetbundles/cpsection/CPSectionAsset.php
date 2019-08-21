@@ -8,14 +8,14 @@
  * @copyright Copyright (c) 2019 Clive Portman
  */
 
-namespace cliveportman\appstackretail\assetbundles\indexcpsection;
+namespace cliveportman\appstackretail\assetbundles\cpsection;
 
 use Craft;
 use craft\web\AssetBundle;
 use craft\web\assets\cp\CpAsset;
 
 /**
- * IndexCPSectionAsset AssetBundle
+ * CPSectionAsset AssetBundle
  *
  * AssetBundle represents a collection of asset files, such as CSS, JS, images.
  *
@@ -32,7 +32,7 @@ use craft\web\assets\cp\CpAsset;
  * @package   AppstackRetail
  * @since     1.0.0
  */
-class IndexCPSectionAsset extends AssetBundle
+class CPSectionAsset extends AssetBundle
 {
     // Public Methods
     // =========================================================================
@@ -43,7 +43,7 @@ class IndexCPSectionAsset extends AssetBundle
     public function init()
     {
         // define the path that your publishable resources live
-        $this->sourcePath = "@cliveportman/appstackretail/assetbundles/indexcpsection/dist";
+        $this->sourcePath = "@cliveportman/appstackretail/assetbundles/cpsection/dist";
 
         // define the dependencies
         $this->depends = [
@@ -53,6 +53,8 @@ class IndexCPSectionAsset extends AssetBundle
         // define the relative path to CSS/JS files that should be registered with the page
         // when this asset bundle is registered
         $this->js = [
+            'js/App.js',
+            'js/Settings.js',
             'js/Index.js',
         ];
 

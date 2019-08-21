@@ -1,7 +1,7 @@
 /**
  * Appstack Retail plugin for Craft CMS
  *
- * Appstack Retail CSS
+ * Index Field JS
  *
  * @author    Clive Portman
  * @copyright Copyright (c) 2019 Clive Portman
