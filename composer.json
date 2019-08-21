@@ -1,0 +1,43 @@
+{
+    "name": "cliveportman/appstack-retail",
+    "description": "Provides an alternative admin area for retail stores using  Craft Commerce, based on the official Bootstrap Appstack classic theme.",
+    "type": "craft-plugin",
+    "version": "1.0.0",
+    "keywords": [
+        "craft",
+        "cms",
+        "craftcms",
+        "craft-plugin",
+        "appstack retail"
+    ],
+    "support": {
+        "docs": "https://github.com/cliveportman/appstack-retail/blob/master/README.md",
+        "issues": "https://github.com/cliveportman/appstack-retail/issues"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Clive Portman",
+            "homepage": "https://clive.theportman.co"
+        }
+    ],
+    "require": {
+        "craftcms/cms": "^3.0.0-RC1"
+    },
+    "autoload": {
+        "psr-4": {
+          "cliveportman\\appstackretail\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Appstack Retail",
+        "handle": "appstack-retail",
+        "hasCpSettings": true,
+        "changelogUrl": "https://raw.githubusercontent.com/cliveportman/appstack-retail/master/CHANGELOG.md",
+        "components": {
+            "orders": "cliveportman\\appstackretail\\services\\Orders",
+            "products": "cliveportman\\appstackretail\\services\\Products"
+        },
+        "class": "cliveportman\\appstackretail\\AppstackRetail"
+    }
+}

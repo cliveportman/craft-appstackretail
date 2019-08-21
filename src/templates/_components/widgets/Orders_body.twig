@@ -1,0 +1,20 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Appstack Retail plugin for Craft CMS
+ *
+ * Orders Widget Body
+ *
+ * @author    Clive Portman
+ * @copyright Copyright (c) 2019 Clive Portman
+ * @link      https://clive.theportman.co
+ * @package   AppstackRetail
+ * @since     1.0.0
+ */
+#}
+
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@cliveportman/appstackretail/assetbundles/orderswidget/dist', true) ~ '/img/Orders-icon.svg' %}
+
+<img src="{{ iconUrl }}" height="64" width="64" />
+
+<p>{{ message }}</p>

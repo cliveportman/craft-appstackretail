@@ -1,0 +1,46 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Appstack Retail plugin for Craft CMS 3.x
+ *
+ * Appstack Retail index.twig
+ *
+ * @author    Clive Portman
+ * @copyright Copyright (c) 2019 Clive Portman
+ * @link      https://clive.theportman.co
+ * @package   AppstackRetail
+ * @since     1.0.0
+ */
+#}
+
+{% extends "_layouts/cp" %}
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("cliveportman\\appstackretail\\assetbundles\\appstackretail\\AppstackRetailAsset") %}
+{% do view.registerAssetBundle("cliveportman\\appstackretail\\assetbundles\\indexcpsection\\IndexCPSectionAsset") %}
+
+{# Link for the ? icon at the bottom of the page #}
+{% set docsUrl = "https://github.com/cliveportman/appstack-retail/blob/master/README.md" %}
+
+{# The title of this CP section #}
+{% set title = "Appstack Retail" %}
+
+{# The URL to this plugin's base CP section #}
+{% set pluginCpUrl = url('appstack-retail') %}
+
+{# Get a URL to an image in our AssetBundle #}
+{% set iconUrl = view.getAssetManager().getPublishedUrl('@cliveportman/appstackretail/assetbundles/indexcpsection/dist', true) ~ '/img/Index-icon.svg' %}
+
+{# Content that should appear in the page header#}
+{% set extraPageHeaderHtml %}
+    <div class="buttons">
+        <a href="{{ pluginCpUrl }}" class="btn submit add icon">{{ "Click Me!"|t('appstack-retail') }}</a>
+    </div>
+{% endset %}
+
+{# The content of the CP Section#}
+{% set content %}
+    <h2>{{ "Index CP Section body goes here"|t('appstack-retail') }}</h2>
+    <img src="{{ iconUrl }}" height="64" width="64" />
+    <p class="textline"></p>
+{% endset %}

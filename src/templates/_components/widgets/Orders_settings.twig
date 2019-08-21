@@ -1,0 +1,26 @@
+{# @var craft \craft\web\twig\variables\CraftVariable #}
+{#
+/**
+ * Appstack Retail plugin for Craft CMS
+ *
+ * Orders Widget Settings
+ *
+ * @author    Clive Portman
+ * @copyright Copyright (c) 2019 Clive Portman
+ * @link      https://clive.theportman.co
+ * @package   AppstackRetail
+ * @since     1.0.0
+ */
+#}
+
+{% import "_includes/forms" as forms %}
+
+{% do view.registerAssetBundle("cliveportman\\appstackretail\\assetbundles\\appstackretail\\AppstackRetailAsset") %}
+
+{{ forms.textField({
+    label: 'Message',
+    instructions: 'Enter a message here.',
+    id: 'message',
+    name: 'message',
+    value: widget['message']})
+}}
